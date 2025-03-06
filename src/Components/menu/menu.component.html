@@ -1,0 +1,15 @@
+<mat-toolbar color="accent">
+    <span class="spacer"></span>
+    <button mat-button routerLink="/" routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }">Home</button>
+    @if(!isLogin$){
+    <button mat-button routerLink="/register" routerLinkActive="active-link">SignUp</button>
+    <button mat-button routerLink="/login" routerLinkActive="active-link">SignIn</button>
+    }
+    @else {
+    <button mat-button routerLink="/course" routerLinkActive="active-link">Courses</button>
+    @if(userRole=="teacher"){
+    <button mat-button routerLink="/coursesManagement" routerLinkActive="active-link">Manage Courses</button>
+    }
+    }
+</mat-toolbar>

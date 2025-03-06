@@ -1,0 +1,23 @@
+<mat-card class="course-card">
+    <mat-card-header>
+        <mat-card-title>{{ (courseDetails$ | async)?.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <h3 class="course-description">{{ (courseDetails$ | async)?.description }}</h3>
+        <p class="teacher-id">👨‍🏫 Teacher ID: {{ (courseDetails$ | async)?.teacherId }}</p>
+    </mat-card-content>
+</mat-card>
+
+<div class="lessons-grid">
+    @for (lesson of (lessons$|async); track lesson.courseId) {
+    <mat-card class="lesson-card">
+        <mat-card-header>
+            <mat-card-title>{{ lesson.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{ lesson.content }}</p>
+            <p class="course-id">📌 Course ID: {{ lesson.courseId }}</p>
+        </mat-card-content>
+    </mat-card>
+    }
+</div>

@@ -1,0 +1,70 @@
+/* Course Card */
+.course-card {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Course Description */
+  .course-description {
+    font-size: 18px;
+    font-weight: 400;
+    color: #555;
+  }
+  
+  /* Teacher ID */
+  .teacher-id {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Lessons Grid */
+  .lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 10px;
+  }
+  
+  /* Lesson Card */
+  .lesson-card {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .lesson-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Course ID */
+  .course-id {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3f51b5;
+    margin-top: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .course-card {
+      max-width: 90%;
+    }
+  
+    .lessons-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

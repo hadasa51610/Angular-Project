@@ -1,0 +1,41 @@
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+mat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the content horizontally */
+    justify-content: center;
+    /* Center the content vertically */
+    padding: 16px;
+    /* Add padding inside the card */
+    border: 1px solid #ccc;
+    /* Add a border */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow for prominence */
+    transition: transform 0.2s;
+    /* Smooth transition */
+}
+
+mat-card:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the card on hover */
+}
+
+mat-card-header,
+mat-card-content {
+    text-align: center;
+    /* Center text alignment */
+}
+
+mat-card-actions {
+    justify-content: center;
+    /* Center buttons */
+}
