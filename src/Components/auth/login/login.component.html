@@ -22,8 +22,8 @@
                 </mat-form-field>
 
                 <div class="button-container">
-                    <button mat-raised-button color="primary" type="submit"
-                        [disabled]="loginForm.invalid">Save</button>
+                    <button appButton [defaultColor]="'blue'" [hoverColor]="'lightblue'" mat-raised-button color="primary" type="submit"
+                        [disabled]="loginForm.invalid">Sign In</button>
                 </div>
             </form>
         </mat-card-content>

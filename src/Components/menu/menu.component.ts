@@ -14,11 +14,9 @@ import { Observable } from 'rxjs';
 })
 export class MenuComponent {
   constructor(private authService: AuthService) { }
-  isLogin$!: Observable<boolean>;
   userRole!: string;
 
   ngOnInit() {
-    this.isLogin$ = this.authService.getIsLogin();
     this.userRole = this.authService.getUserRole();
   }
 }

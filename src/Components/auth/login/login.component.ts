@@ -7,11 +7,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { AuthService } from '../../../services/auth.service';
 import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
+import { ButtonDirective } from '../../../directive/button.directive';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatCardModule],
+  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatCardModule,ButtonDirective],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -29,6 +30,7 @@ export class LoginComponent {
         console.log('User Logged In:', response);
         if (response.token!=null) {
           this.router.navigate(['/']);
+          this.authService.setUserRole(response.role);
         }
       },
       error => {

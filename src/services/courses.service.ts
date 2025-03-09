@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { Course } from '../models/course.model';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class CoursesService {
   private userId: number = sessionStorage.getItem('userID')! ? parseInt(sessionStorage.getItem('userID')!) : 0;
   private courses: BehaviorSubject<Course[]> = new BehaviorSubject<Course[]>([]);
   public courses$ = this.courses.asObservable();
-
+  
   getUserId(): number {
     return this.userId;
   }
